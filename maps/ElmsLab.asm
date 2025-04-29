@@ -118,10 +118,10 @@ ElmCheckEverstone:
 	end
 
 ElmEggHatchedScript:
-	setval TOGEPI
+	setval BAGON
 	special FindPartyMonThatSpeciesYourTrainerID
 	iftrue ShowElmTogepiScript
-	setval TOGETIC
+	setval BAGON
 	special FindPartyMonThatSpeciesYourTrainerID
 	iftrue ShowElmTogepiScript
 	sjump ElmCheckGotEggAgain
@@ -161,8 +161,8 @@ CyndaquilPokeBallScript:
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
 	reanchormap
-	pokepic CYNDAQUIL
-	cry CYNDAQUIL
+	pokepic FLYGON
+	cry FLYGON
 	waitbutton
 	closepokepic
 	opentext
@@ -170,16 +170,17 @@ CyndaquilPokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL1
-	setevent EVENT_GOT_CYNDAQUIL_FROM_ELM
+	setevent EVENT_GOT_FLYGON_FROM_ELM
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	getmonname STRING_BUFFER_3, CYNDAQUIL
+	getmonname STRING_BUFFER_3, FLYGON
 	writetext ReceivedStarterText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	promptbutton
-	givepoke CYNDAQUIL, 5, BERRY
+	givepoke FLYGON, 5, BERRY
+
 	closetext
 	readvar VAR_FACING
 	ifequal RIGHT, ElmDirectionsScript
@@ -209,7 +210,7 @@ TotodilePokeBallScript:
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	promptbutton
-	givepoke TOTODILE, 5, BERRY
+	givepoke CHARIZARD, 5, BERRY
 	closetext
 	applymovement PLAYER, AfterTotodileMovement
 	sjump ElmDirectionsScript
@@ -219,8 +220,8 @@ ChikoritaPokeBallScript:
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
 	reanchormap
-	pokepic CHIKORITA
-	cry CHIKORITA
+	pokepic BAGON
+	cry BAGON
 	waitbutton
 	closepokepic
 	opentext
@@ -237,7 +238,7 @@ ChikoritaPokeBallScript:
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	promptbutton
-	givepoke CHIKORITA, 5, BERRY
+	givepoke BAGON, 5, BERRY
 	closetext
 	applymovement PLAYER, AfterChikoritaMovement
 	sjump ElmDirectionsScript
@@ -725,53 +726,53 @@ AfterChikoritaMovement:
 
 ElmText_Intro:
 	text "ELM: <PLAY_G>!"
-	line "There you are!"
+	line "Allanou!"
 
-	para "I needed to ask"
-	line "you a favor."
+	para "J'ai besoin d'un service"
+	line "de toi."
 
-	para "I'm conducting new"
+	para "Je te montre"
 	line "#MON research"
 
-	para "right now. I was"
-	line "wondering if you"
+	para "Tout de suite. J'étais..."
+	line "Je me demandais si"
 
-	para "could help me with"
+	para "tu pouvais m'aider avec"
 	line "it, <PLAY_G>."
 
-	para "You see…"
+	para "Regarde"
 
-	para "I'm writing a"
-	line "paper that I want"
+	para "J'écrit un"
+	line "document que je veux que tu"
 
-	para "to present at a"
-	line "conference."
+	para "présentes"
+	line "a la conference."
 
-	para "But there are some"
-	line "things I don't"
+	para "Mais il y a"
+	line "des choses que"
 
-	para "quite understand"
-	line "yet."
+	para "je ne comprends pas"
+	line "encore."
 
-	para "So!"
+	para Alors!"
 
-	para "I'd like you to"
-	line "raise a #MON"
+	para "Je voudrais que tu"
+	line "t'occupes d'un #MON"
 
-	para "that I recently"
-	line "caught."
+	para "que j'ai récemment"
+	line "capturé."
 	done
 
 ElmText_Accepted:
-	text "Thanks, <PLAY_G>!"
+	text "Merci, <PLAY_G>!"
 
-	para "You're a great"
-	line "help!"
+	para "T'es le meilleur Allan !"
+	line "Aide moi!"
 	done
 
 ElmText_Refused:
-	text "But… Please, I"
-	line "need your help!"
+	text "Mais s'im te plait, je"
+	line "J'ai besoin de ton aide !"
 	done
 
 ElmText_ResearchAmbitions:
@@ -858,20 +859,20 @@ LabWhereGoingText:
 
 TakeCyndaquilText:
 	text "ELM: You'll take"
-	line "CYNDAQUIL, the"
+	line "FLYGON, the"
 	cont "fire #MON?"
 	done
 
 TakeTotodileText:
 	text "ELM: Do you want"
-	line "TOTODILE, the"
+	line "BAGON, the"
 	cont "water #MON?"
 	done
 
 TakeChikoritaText:
 	text "ELM: So, you like"
-	line "CHIKORITA, the"
-	cont "grass #MON?"
+	line "CHARIZARD, the"
+	cont "fire #MON?"
 	done
 
 DidntChooseStarterText:
