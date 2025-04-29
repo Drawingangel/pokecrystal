@@ -8,7 +8,7 @@ JohtoGrassWildMons:
 	db 3, RATTATA
 	db 4, RATTATA
 	db 5, RATTATA
-	db 3, RATTATA
+	db 3, LUGIA
 	db 6, RATTATA
 	db 5, RATTATA
 	db 5, RATTATA
@@ -173,7 +173,7 @@ JohtoGrassWildMons:
 	def_grass_wildmons TIN_TOWER_6F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	db 20, RATTATA
+	db 20, LUGIA
 	db 21, RATTATA
 	db 22, RATTATA
 	db 22, RATTATA
